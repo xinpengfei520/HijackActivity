@@ -8,6 +8,7 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.xpf.android.hijackactivity.service.AlarmService;
+import com.xpf.android.hijackactivity.service.HijackingService;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -17,6 +18,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        Intent intent = new Intent(this, HijackingService.class);
+        startService(intent);
     }
 
     @Override
